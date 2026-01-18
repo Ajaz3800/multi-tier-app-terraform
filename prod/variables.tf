@@ -31,3 +31,8 @@ variable "desired_capacity" {
   description = "ASG Desired Capacity"
   type        = string
 }
+
+variable "availability_zone" {
+  description = "Availability zone"
+  type        = string
+}

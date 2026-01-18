@@ -13,7 +13,7 @@ resource "aws_launch_template" "tomcat-app" {
       Name = "test"
     }
   }
-  user_data = file("tomcat_ubuntu.sh")
+  user_data = file("./scripts/tomcat_ubuntu.sh")
   iam_instance_profile {
     name = aws_iam_instance_profile.tomcat_app_profile.name
   }
