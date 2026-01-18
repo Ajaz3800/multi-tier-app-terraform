@@ -16,3 +16,18 @@ variable "aws_key_pair" {
   description = "AWS key pair"
   type        = string
 }
+
+variable "min_size" {
+  description = "ASG Min_size"
+  type        = string
+}
+
+variable "max_size" {
+  description = "ASG max_size"
+  type        = string
+}
+
+variable "desired_capacity" {
+  description = "ASG Desired Capacity"
+  type        = string
+}
