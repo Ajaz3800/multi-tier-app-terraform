@@ -21,4 +21,4 @@ variable "admin_username" {
 variable "admin_password" {
   description = "Admin password for vProfile application in prod environment"
   type        = string  
-}   
+}
