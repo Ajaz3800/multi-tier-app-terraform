@@ -1,3 +1,7 @@
+variable "region" {
+  description = "AWS Region for deploy infra"
+  type = string
+}
 variable "ami_id" {
   description = "AMI ID for the EC2 instances"
   type        = string
@@ -35,4 +39,9 @@ variable "desired_capacity" {
 variable "availability_zone" {
   description = "Availability zone"
   type        = string
+}
+
+variable "bucket_name" {
+  description = "Backend bucket name"
+  type = string
 }
