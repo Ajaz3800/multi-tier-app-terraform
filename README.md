@@ -86,22 +86,22 @@ Create a file named **`terraform.tfvars`** in the `prod/` directory using the ex
 ### 🔧 `terraform.tfvars`
 
 ```
-# AMI & EC2 Configuration
-ami_id          = "ami-0ecb62995f68bb549"
-instance_type  = "t2.micro"
-aws_key_pair   = "vprofile-key"
-availability_zone = "us-east-1a"
-
-# Auto Scaling Group
-min_size         = 2
-max_size         = 5
-desired_capacity = 3
+nano terraform-backend/terraform.tfvars
+```
+```
+# terraform-backend/terraform.tfvars
 
 # AWS Region
 region = "us-east-1"
 
 # Terraform Backend
 bucket_name = "multi-tier-web-backend-bucket-123456"
+```
+```
+nano ssm/terraform.tfvars
+```
+```
+# ssm/terraform.tfvars
 
 # Database Credentials (SSM Recommended)
 db_username = "test_user"
@@ -114,6 +114,30 @@ rabbitmq_password = "test_password"
 # Application Admin
 admin_username = "test_user"
 admin_password = "test_password"
+```
+```
+nano prod/terraform.tfvars
+```
+```
+# nano ssm/terraform.tfvars
+
+# AWS Region
+region = "us-east-1"
+
+ami_id          = "ami-0ecb62995f68bb549"
+instance_type  = "t2.micro"
+aws_key_pair   = "vprofile-key"
+availability_zone = "us-east-1a"
+
+# Auto Scaling Group
+min_size         = 2
+max_size         = 5
+desired_capacity = 3
+
+
+
+# Terraform Backend
+bucket_name = "multi-tier-web-backend-bucket-123456"
 ```
 
 ## 🚀 Deployment Flow (Recommended Order)

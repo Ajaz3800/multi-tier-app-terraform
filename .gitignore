@@ -3,6 +3,7 @@
 *.pub
 *.tfstate
 *.tfstate.backup
+*.tfstate.*.backup
 .terraform/
 crash.log
 override.tf
